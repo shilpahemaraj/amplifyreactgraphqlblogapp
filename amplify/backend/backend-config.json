@@ -1,0 +1,27 @@
+{
+	"api": {
+		"blogapp": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "description for api key",
+							"apiKeyExpirationDays": "365"
+						}
+					}
+				}
+			}
+		}
+	},
+	"auth": {
+		"blogapp1ded06e1": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
